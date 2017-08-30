@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Last Poker</title>
+    <title>Last Poker - Players</title>
   </head>
   <body>
     <form action="game.php" method="get">
@@ -10,16 +10,17 @@
       <br>  -->
       <?php
         $qnt_players = $_GET["QntJogadores"];
-        for ($i=0; $i < $qnt_players; $i++) {
+        for ($i=1; $i <= $qnt_players; $i++) {
           ?>
-            Jogador <?php echo $i; ?><input type="text"
-              name="Jogador<?php echo $i; ?>" placeholder="Insira um Nome" />
-            Sua Idade<input type="number" name="idade" />
+            Jogador <?php echo $i; ?>
+            <input type="text" name="nomeJogador<?php echo $i; ?>"
+              placeholder="Insira um Nome" />
+            Sua Idade
+            <input type="number" name="idadeJogador<?php echo $i; ?>" />
             <br />
-
-          <?php
-        }
-      ?>
+      <?php } ?>
+      <input type="number" name="QntJogadores"
+        value="<?php echo $qnt_players ?>" hidden>
       <input type="submit" value="OK">
     </form>
   </body>
