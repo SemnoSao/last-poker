@@ -3,7 +3,7 @@
     <title>Last Poker - Players</title>
   </head>
   <body>
-    <form action="game.php" method="get">
+    <form action="jogo.php" method="get">
       <!--  Quantos Jogadores?
       <input type="number" name="Qnt_Jogadores" value="2" min="2" max="10"
         onkeydown="return false">
