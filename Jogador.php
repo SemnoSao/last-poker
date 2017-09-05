@@ -18,11 +18,12 @@ class Jogador
   }
 
   public function __toString() {
-
+    return $this->nome . " ," . $this->idade . " anos"
   }
 
-  public function setMao() {
-
+  public function setMao($Mao) {
+    $this->mao = $Mao;
+    $this->mao->ordenarCartas();
   }
 
 }

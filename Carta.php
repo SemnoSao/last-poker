@@ -6,7 +6,7 @@ class Carta
 {
     private $naipe;
     private $face;
-    private $naipePadrao = [
+    private $facePadrao = [
       1=>"Ás",
       2=>"Dois",
       3=>"Três",
@@ -19,16 +19,23 @@ class Carta
       10=>"Dez",
       11=>"Valete",
       12=>"Dama",
-      13=>"Rei",
+      13=>"Rei"
     ];
+    private $naipePadrao = [
+      "Copas",
+      "Espadas",
+      "Ouros",
+      "Paus"
+    ]
 
     public function __construct($Naipe, $Face) {
-            $this->naipe   = $Naipe;
+            $this->naipe = $Naipe;
             $this->face = $Face;
     }
 
     public function __toString() {
-            return $this->face . ' de ' . $this->naipe;
+            return $this->facePadrao[$this->getFace()] . ' de ' .
+            $this->naipePadrao[$this->getNaipe()];
     }
 
     public function getFace() {
