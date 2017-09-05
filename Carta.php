@@ -7,7 +7,6 @@ class Carta
     private $naipe;
     private $face;
     private $facePadrao = [
-      1=>"Ás",
       2=>"Dois",
       3=>"Três",
       4=>"Quatro",
@@ -19,7 +18,8 @@ class Carta
       10=>"Dez",
       11=>"Valete",
       12=>"Dama",
-      13=>"Rei"
+      13=>"Rei",
+      14=>"Ás"
     ];
     private $naipePadrao = [
       "Copas",

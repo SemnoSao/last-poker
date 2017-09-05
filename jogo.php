@@ -10,7 +10,7 @@
 
       $novoBaralho = [];
       for ($i=0;$i<4;i++)
-        for ($i=1; $i<=13 ; $i++) {
+        for ($i=2; $i<=14 ; $i++) {
            $novoBaralho[] = new Carta($i,$j);
       }
 

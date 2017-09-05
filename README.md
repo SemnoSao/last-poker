@@ -1,2 +1,2 @@
 # last-poker
-a php written last poker round simulator
+um simulador de poker pt/br em PHP
