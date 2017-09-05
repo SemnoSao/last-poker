@@ -8,6 +8,9 @@
       include 'Carta.php';
       include 'Jogador.php';
 
+      $numJogadores = 4;
+      $jogadores = [];
+
       $novoBaralho = [];
       for ($i=0;$i<4;i++)
         for ($i=2; $i<=14 ; $i++) {
@@ -15,6 +18,10 @@
       }
 
       $Baralho = new Baralho($novoBaralho);
+
+      for ($i=0; $i < $numJogadores; $i++) {
+        $jogadores[] = 
+      }
 
     ?>
   </body>

@@ -4,6 +4,17 @@ class Mao
   private $cartas;
   private $kicker;
   private $lowEnd;
+  private $tipoMao = [
+    "Straight Flush",
+    "Quadra",
+    "Full House",
+    "Flush",
+    "Sequência",
+    "Trinca",
+    "Dois Pares",
+    "Par",
+    "Carta Alta"
+  ];
 
   public function __construct(array $Cartas){
     $this->cartas = $Cartas;
@@ -27,31 +38,31 @@ class Mao
     $lowEnd = $this->cartas[0];
 
     if ($this->isStraightFlush()) {
-            return "Straight Flush"
+            return 0
     }
     elseif ($this->isQuadra()) {
-            return "Quadra"
+            return 1
     }
     elseif ($this->isFullHouse()) {
-            return "Full House"
+            return 2
     }
     elseif ($this->isFlush()) {
-            return "Flush"
+            return 3
     }
     elseif ($this->isSequencia()) {
-            return "Sequência"
+            return 4
     }
     elseif ($this->isTrinca()) {
-            return "Trinca"
+            return 5
     }
     elseif ($this->isDoisPares()) {
-            return "Dois Pares"
+            return 6
     }
     elseif ($this->isPar()) {
-            return "Par"
+            return 7
     }
     elseif ($this->isCartaAlta()) {
-            return "Carta Alta"
+            return 8
     }
 
   }
@@ -158,4 +169,7 @@ class Mao
     return $this->lowEnd->getFace();
   }
 
+  private function getTipoMao($Id) {
+    return $this->tipoMao[$Id];
+  }
 }
